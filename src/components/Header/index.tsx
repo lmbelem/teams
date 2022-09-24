@@ -1,5 +1,5 @@
 import { Container, Logo, BackButton, BackIcon } from "./styles";
-import { logoImg } from "@assets/logo.png";
+import logoImg from "@assets/logo.png";
 import { Text } from "react-native";
 
 type Props = {
