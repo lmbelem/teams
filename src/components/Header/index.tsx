@@ -15,7 +15,7 @@ export function Header({ showBackButton = false }: Props) {
         </BackButton>
       )}
       <Logo source={logoImg} />
-      <Text style={{ color: "white" }}>Logo</Text>
+      <Text style={{ color: "white" }}></Text>
     </Container>
   );
 }
