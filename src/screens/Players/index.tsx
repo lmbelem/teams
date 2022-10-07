@@ -1,5 +1,6 @@
 import { Input } from "@components/Input";
 import { Header } from "@components/Header";
+import { Filter } from "@components/Filter";
 import { Highlight } from "@components/HighLight";
 import { ButtonIcon } from "@components/ButtonIcon";
 
@@ -17,6 +18,7 @@ export function Players() {
         <Input placeholder="Nome da pessoa" autoCorrect={false} />
         <ButtonIcon icon="add" />
       </Form>
+      <Filter title="Turma A" isActive />
     </Container>
   );
 }
