@@ -10,7 +10,7 @@ import { Loading } from "@components/Loading";
 
 import theme from "@theme/index";
 
-import { NewGroup } from "@screens/NewGroup";
+import { Players } from "@screens/Players";
 
 export default function App() {
   //esse nome (fontsLoaded ) pode  ser qualquer um.
@@ -23,7 +23,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <NewGroup /> : <Loading />}
+      {fontsLoaded ? <Players /> : <Loading />}
     </ThemeProvider>
   );
 }
