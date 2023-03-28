@@ -4,6 +4,7 @@ import { FlatList } from "react-native";
 import { Input } from "@components/Input";
 import { Header } from "@components/Header";
 import { Filter } from "@components/Filter";
+import { ListEmpty } from "@components/ListEmpty";
 import { Highlight } from "@components/HighLight";
 import { ButtonIcon } from "@components/ButtonIcon";
 import { PlayerCard } from "@components/PlayerCard";
@@ -12,7 +13,18 @@ import { Container, Form, HeaderList, NumberOfPlayers } from "./styles";
 
 export function Players() {
   const [team, setTeam] = useState("Time A");
-  const [players, setPlayers] = useState(["Luciano Belém", "Sara Z00in"]);
+  const [players, setPlayers] = useState([
+    "Luciano Belém",
+    "Sara Z00in",
+    "Selma Belem",
+    "Patricia",
+    "Kelma",
+    "Alexandre",
+    "Gustavo",
+    "Marcelo",
+    "Lucas",
+    "Cleumar",
+  ]);
   return (
     <Container>
       <Header showBackButton />
@@ -45,6 +57,14 @@ export function Players() {
         renderItem={({ item }) => (
           <PlayerCard name={item} onRemove={() => {}} />
         )}
+        ListEmptyComponent={() => (
+          <ListEmpty message="Time sem participantes" />
+        )}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={[
+          { paddingBottom: 100 },
+          players.length === 0 && { flex: 1 },
+        ]}
       />
     </Container>
   );
